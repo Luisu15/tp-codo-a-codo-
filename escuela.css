@@ -1,0 +1,271 @@
+
+
+* {
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Scheherazade New', serif;
+  color:white;
+  background: #5c5a5a; 
+  font-size: 1em;
+  line-height: 1.5em;
+
+  
+}
+.consejos article {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  justify-content: center;  
+}
+
+
+
+/* efecto del H1 */ 
+.efecto_h1{
+  margin: left;
+
+}
+h1{
+  float:center;
+  color: white;
+  position: relative;
+  background-color:#5c5a5a;
+  text-transform: uppercase;
+
+}
+
+h1 span {
+position:absolute;
+right:0;
+width:0;
+background:#5c5a5a;
+border-left: 1px solid #5c5a5a;
+animation: maquina 7s infinite alternate steps(44);
+
+}
+@keyframes maquina{
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0%;
+
+  }
+}
+
+
+
+h1{
+ padding-top:75px; 
+}
+
+h2 {
+  color:White;
+  margin: 10px 10px 20px 10px;
+  padding: 15px;
+}
+
+/*  Menu   (no lo puedo hacer responsive)  */ 
+#p_header {
+  float: left;
+  padding: 15px 0 0 20px;
+  text-decoration: none;
+  color: white;
+}
+  #p_header:hover {
+      color: rgb(147, 72, 245);
+      transition: 400ms ease-in-out;
+  }
+  
+  #p_header .p_nombre {
+      display: block;
+      font-weight: 700;
+      font-size: 1.2em;
+  }
+  
+  #p_header .p_descrip {
+      display: block;
+      font-weight: 300;
+      font-size: 0.8em;
+      color: #999;
+      
+  }
+  .text_consejos p {
+      margin: 0 0 1.5em 0;
+      padding: 15px;
+  }
+  
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  /* menu*/
+
+
+  nav{
+    float:right;
+}
+
+.nav__responsive-ul{
+    display: none;
+        
+    }
+
+.nav__ul{
+    background-color:#000;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    color: white;
+    }
+.nav__li{
+display: inline-block; 
+padding: 20px;          
+color:#fff;
+}
+    
+.nav__li:hover > a{
+
+color:rgb(147, 72, 245);
+transition: 400ms ease-in-out;
+    }
+
+.nav__li a {
+    
+        color: #fff;
+    text-decoration: none;
+    }
+.nav__li i{
+    width: 30px;
+    box-sizing: border-box;
+    text-align:left;
+    margin-right: 7px;
+    }
+
+.nav__responsive-button-conteiner{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    background-color: #000;
+    margin-top:-37px;
+    }
+
+.nav__responsive-button{
+        padding:6px 20px;
+        text-align: right;
+        width:100%;
+    }
+
+    #conteinerh{
+  background: rgb(17, 17, 17);
+                  
+  height: 80px;	
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+  left: 0; /* Posicionamos la cabecera al lado izquierdo */
+  top: 0; /* Posicionamos la cabecera pegada arriba */
+  position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+              
+              }
+
+
+/*primera parte*/
+
+.box { 
+  width: 95%;
+  max-width: auto;
+  margin: 20px auto;
+  display: grid;
+  grid-gap:20px;
+  grid-template-columns: repeat(3 ,1fr);  
+  text-align: center;
+  background: #5c5a5a ;
+
+  }
+.box img{
+  width: 500px;
+  height: 500px;
+  margin:auto;
+  display: block;
+  border-radius: 20px;
+  
+}
+/* Lugar   */ 
+
+
+.art_lugar  {
+ 
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+ 
+  }
+  article .lugar {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+       
+
+  }
+
+
+
+iframe {
+width: 300px; 
+height: 300px
+}
+/* probando footer  no me qedan bien los iconos de las redes sociales */
+
+footer{
+  
+  width: 95%;
+  background:linear-gradient(90deg, #5c5a5c 0%,rgb(84, 19, 100)50%, #5c5a5c 100%);
+  color: white;
+    
+
+}
+.container-footer-all .container-colum{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 10px;
+  
+}
+
+.container-footer-all .container-colum .redes i:hover{
+
+  color:rgb(17, 17, 17);
+  background-color:white;
+  align-items: center;
+}
+
+button{
+    width:1fr;
+    height:1fr;
+    background-color: #5c5a5c;
+    box-sizing: 25px;
+    border:none;
+    cursor: pointer;     
+    color: #eaf1f1;
+    font-size:30px;
+    
+    
+}
+
+  @media (min-width:955px) {
+    .place {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+    }
+  }

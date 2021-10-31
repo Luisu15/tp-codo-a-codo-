@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+
+  scroll-behavior: smooth;
+}
+
+#contenedor-ppal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4rem 25% 1fr 1fr 8rem;
+  grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . extra"
+    "banner banner banner banner";
+}
+
+#header {
+  background-color: black;
+  grid-area: header;
+}
+
+#menu {
+  background-color: crimson;
+  grid-area: menu;
+}
+
+#hero {
+  background-color: rgb(1, 141, 235);
+  grid-area: hero;
+}
+
+#main {
+  background-color: rgb(3, 45, 85);
+  grid-area: main;
+}
+
+#image {
+  background-color: rgb(153, 207, 224);
+  grid-area: image;
+}
+
+#extra {
+  background-color: darkturquoise;
+  grid-area: extra;
+}
+
+#banner {
+  background-color: yellow;
+  grid-area: banner;
+}
+
+img {
+  width: 100%;
+}
+
+.letra-clara {
+  color: lightcyan;
+}
+
+@media screen and (max-width: 760px) {
+  #contenedor-ppal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "header"
+      "menu"
+      "hero"
+      "main"
+      "image"
+      "extra"
+      "banner";
+  }}
+
+  @media screen and (min-width: 761px) and (max-width: 1023px) {
+  #contenedor-ppal{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4em repeat(2,3fr) repeat(2,2fr);
+    grid-template-areas: 
+    "header header header header"
+    "hero hero hero hero"
+    "menu main main main"
+    "menu banner banner banner"
+    "menu extra extra image"
+    ;
+  }
+  }
+}
